@@ -90,3 +90,15 @@ function reusableFunction(){
 }
 
 reusableFunction();
+
+function functionWithArgs(first = 1, second = 2){
+  console.log(first + second);
+}
+
+functionWithArgs(1, 2);
+
+function timesFive(num){
+  return num * 5;
+}
+
+timesFive(5);
