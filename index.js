@@ -38,3 +38,6 @@ const myArray = ['1', 1];
 
 // Only change code below this line
 const myArray = [[1]];
+
+const myArray = [50, 60, 70];
+const myData = myArray[0];
