@@ -35,3 +35,6 @@ const wordBlanks = [myNoun, myAdjective, myVerb, myAdverb].join(','); // Change 
 
 // Only change code below this line
 const myArray = ['1', 1];
+
+// Only change code below this line
+const myArray = [[1]];
