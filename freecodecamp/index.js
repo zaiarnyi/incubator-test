@@ -403,3 +403,30 @@ function testSize(num) {
 }
 
 testSize(7);
+
+const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
+function golfScore(par, strokes) {
+  // Only change code below this line
+  let num = 0;
+  if(strokes === 1){
+    num = 0;
+  }else if(strokes <= par - 2){
+    num = 1;
+  }else if(strokes === par - 1){
+    num = 2;
+  }else if(strokes === par){
+    num = 3;
+  }else if(strokes === par + 1){
+    num = 4;
+  }else if(strokes === par + 2){
+    num = 5;
+  }else if(strokes >= par + 3){
+    num = 6;
+  }
+  console.log(names[num], num)
+  return names[num];
+  // Only change code above this line
+}
+
+golfScore(5, 4);
