@@ -1194,4 +1194,17 @@ let myString = "Hello, World!";
 let myRegex = /Hello/;
 let result = myRegex.test(myString); // Change this line
 
+function findOdd(A) {
+  const counter = A.reduce((acc, item)=> {
+
+//     if(item >= 0){
+    acc[item] =  acc[item] + 1 || 1;
+//     }
+
+    return acc
+  },{})
+  console.log(Number(Object.keys(counter).filter(item=> counter[item] % 2 !== 0)[0] || 0))
+  return Number(Object.keys(counter).filter(item=> counter[item] % 2 !== 0)[0] || 0);
+}
+
 
