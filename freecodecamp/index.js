@@ -948,3 +948,7 @@ function countdown(n){
   return n < 1 ? [] : [n, ...countdown(n - 1)];
 }
 
+function rangeOfNumbers(startNum, endNum) {
+  return startNum > endNum ? [] : [startNum, ...rangeOfNumbers(startNum + 1, endNum)];
+};
+
