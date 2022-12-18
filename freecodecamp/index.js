@@ -1130,12 +1130,13 @@ let temp = thermos.temperature; // 24.44 in Celsius
 thermos.temperature = 26;
 temp = thermos.temperature; // 26 in Celsius
 
-<html>
-<body>
-<!-- Only change code below this line -->
+const uppercaseString = (string) => {
+  return string.toUpperCase();
+}
 
-<!-- Only change code above this line -->
-</body>
-<script type="module" src="index.js"></script>
-</html>
+const lowercaseString = (string) => {
+  return string.toLowerCase()
+}
+
+export {uppercaseString, lowercaseString};
 
