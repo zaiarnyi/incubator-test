@@ -1207,4 +1207,8 @@ function findOdd(A) {
   return Number(Object.keys(counter).filter(item=> counter[item] % 2 !== 0)[0] || 0);
 }
 
+function findOdd(arr) {
+  return arr.find((item, index) => arr.filter(el => el == item).length % 2)
+}
+
 
