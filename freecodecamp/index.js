@@ -1140,3 +1140,9 @@ const lowercaseString = (string) => {
 
 export {uppercaseString, lowercaseString};
 
+// Only change code above this line
+
+uppercaseString("hello");
+lowercaseString("WORLD!");
+
+
