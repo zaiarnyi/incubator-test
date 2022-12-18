@@ -665,3 +665,12 @@ function phoneticLookup(val) {
 }
 
 phoneticLookup("charlie");
+
+function checkObj(obj, checkProp) {
+  // Only change code below this line
+  if(checkProp in obj){
+    return obj[checkProp];
+  }
+  return 'Not Found'
+  // Only change code above this line
+}
