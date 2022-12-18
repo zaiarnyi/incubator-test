@@ -791,5 +791,15 @@ for(let i = 1; i <= 5; i++){
 }
 
 // Only change code below this line
+// Setup
+const myArray = [];
+
+for (let i = 0; i < 10; i++) {
+  if(i % 2 !== 0){
+    myArray.push(i);
+  }
+}
+
+// Only change code below this line
 
 
