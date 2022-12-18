@@ -938,3 +938,9 @@ function checkEqual(a, b) {
 
 checkEqual(1, 2);
 
+function checkSign(num) {
+  return !num ? 'zero' : num > 0 ? 'positive' : 'negative'
+}
+
+checkSign(10);
+
