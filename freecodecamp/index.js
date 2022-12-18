@@ -570,3 +570,13 @@ function cc(card) {
 }
 
 cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+const myDog = {
+  // Only change code below this line
+  name: 'Denis',
+  legs: 4,
+  tails: 2,
+  friends: ['de']
+
+  // Only change code above this line
+};
