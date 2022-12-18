@@ -920,3 +920,9 @@ function randomRange(myMin, myMax) {
   // Only change code above this line
 }
 
+function convertToInteger(str) {
+  return parseInt(str);
+}
+
+convertToInteger("56");
+
