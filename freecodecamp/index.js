@@ -1219,6 +1219,14 @@ function duplicateEncode(word){
   return w.split('').map((item, i, arr)=> arr.filter(l=> item === l).length > 1 ? ')' : '(').join('')
 }
 
+function XO(str) {
+  const s = str.toLowerCase().split('');
+  if(s.every(item => !/x|o/.test(item))){
+    return true;
+  }
+  return s.filter(item => item === 'x')?.length === s.filter(item => item === 'o')?.length
+}
+
 
 
 
