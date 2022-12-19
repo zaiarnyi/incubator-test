@@ -1214,5 +1214,11 @@ function findMultiples(integer, limit) {
   return Array.from({length: Math.floor(limit / integer)}, (_, i)=> integer + (integer * i))
 }
 
+function duplicateEncode(word){
+  const w = word.toLowerCase();
+  return w.split('').map((item, i, arr)=> arr.filter(l=> item === l).length > 1 ? ')' : '(').join('')
+}
+
+
 
 
