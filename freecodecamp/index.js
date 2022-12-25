@@ -1410,5 +1410,18 @@ const bouncingBall = (h, b, w) => {
   return count;
 };
 
+const solution = string => {
+  let curr = 0;
+  const arr = [];
+  [...string].forEach((l, i) => {
+    if (l === l.toUpperCase()) {
+      arr.push(string.slice(curr, i));
+      curr = i;
+    }
+  });
+  arr.push(string.slice(curr, string.length));
+  return arr.join(" ");
+};
+
 
 
