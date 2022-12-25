@@ -1358,5 +1358,14 @@ function autocomplete(input, dictionary) {
   return validWords.slice(0, 5);
 }
 
+function cleanString(s) {
+  let r = "";
+  for (let c of s) {
+    if (c !== "#") r += c;
+    if (c === "#" && r.length > 0) r = r.slice(0, -1);
+  }
+  return r;
+}
+
 
 
