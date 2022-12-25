@@ -1367,5 +1367,28 @@ function cleanString(s) {
   return r;
 }
 
+const backwardsPrime = (start, stop) => {
+  const arr = [];
+  for (let i = start; i <= stop; i++) {
+    if (
+      isPrime(i) &&
+      isPrime(+[...`${i}`].reverse().join("")) &&
+      i !== +[...`${i}`].reverse().join("")
+    ) {
+      arr.push(i);
+    }
+  }
+  return arr;
+};
+
+const isPrime = (n) => {
+  for (let i = 2, s = Math.sqrt(n); i <= s; i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return n > 1;
+};
+
 
 
