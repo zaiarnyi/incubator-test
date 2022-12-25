@@ -1227,6 +1227,12 @@ function XO(str) {
   return s.filter(item => item === 'x')?.length === s.filter(item => item === 'o')?.length
 }
 
+function rgb(r, g, b) {
+  const detect = (n)=> Math.max(Math.min(n, 255), 0)
+
+  return ((1 << 24) + (detect(r) << 16) + (detect(g) << 8) + detect(b)).toString(16).slice(1).toUpperCase();
+}
+
 
 
 
