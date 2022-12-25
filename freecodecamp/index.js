@@ -1452,5 +1452,53 @@ const longestConsec = (strarr, k) => {
   return longest;
 };
 
+const isValidCoordinates = (coordinates) => {
+  const lat = coordinates.split(",")[0];
+  const long = coordinates.split(",")[1].slice(1);
+  return coordinates.split(",").length > 2 ||
+  !isValid(lat, "lat") ||
+  !isValid(long, "long") ||
+  !isDigitOrSpecChar(lat) ||
+  !isDigitOrSpecChar(long)
+    ? false
+    : true;
+};
+
+const isValid = (coordinate, type) => {
+  if (type === "lat") {
+    return Math.abs(coordinate) >= 0 && Math.abs(coordinate) <= 90
+      ? true
+      : false;
+  } else {
+    return Math.abs(coordinate) >= 0 && Math.abs(coordinate) <= 180
+      ? true
+      : false;
+  }
+};
+
+const isDigitOrSpecChar = (str) => {
+  const allowed = [
+    "-",
+    ",",
+    ".",
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ];
+  for (let char of [...str]) {
+    if (!allowed.includes(char) || char === " ") {
+      return false;
+    }
+  }
+  return true;
+};
+
 
 
