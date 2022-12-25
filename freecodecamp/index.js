@@ -1284,5 +1284,16 @@ function removeParentheses(s){
   return s.replace(/\(.+\)/,'');
 }
 
+function deleteNth(arr,n){
+  let checkN = {}
+  return arr.reduce((acc, item)=> {
+    if(checkN[item] === undefined || checkN[item] < n){
+      acc.push(item);
+    }
+    checkN[item] = checkN[item] >= 0 ? checkN[item] + 1 : 1;
+    return acc;
+  },[])
+}
+
 
 
