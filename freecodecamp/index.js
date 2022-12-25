@@ -1434,5 +1434,13 @@ const towerBuilder = numFloors => {
   return ans;
 };
 
+String.prototype.camelCase = function() {
+  return `${this}`
+    .split(" ")
+    .filter(w => w.length)
+    .map(w => w[0].toUpperCase() + w.slice(1))
+    .join("");
+};
+
 
 
