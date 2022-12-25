@@ -1341,5 +1341,22 @@ Array.prototype.odd = function() {
   return this.filter(val => val % 2 === 1);
 };
 
+function convertSpecialChars(input) {
+  return input.replace(/[^a-z]/gi, "");
+}
+
+function autocomplete(input, dictionary) {
+  input = convertSpecialChars(input);
+  const validWords = dictionary
+    .reduce((acc, cur) => {
+      if (cur.toLowerCase().startsWith(input)) {
+        acc.push(cur);
+      }
+      return acc;
+    }, [])
+    .slice(0, 5);
+  return validWords.slice(0, 5);
+}
+
 
 
