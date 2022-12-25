@@ -1399,5 +1399,16 @@ const countBits = int => {
   return oneBits;
 };
 
+const bouncingBall = (h, b, w) => {
+  if (h <= 0 || b <= 0 || b >= 1 || w >= h) return -1;
+  let count = 0;
+  while (h > w) {
+    count++;
+    h *= b;
+    if (h > w) count++;
+  }
+  return count;
+};
+
 
 
