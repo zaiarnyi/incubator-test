@@ -1422,6 +1422,17 @@ const solution = string => {
   arr.push(string.slice(curr, string.length));
   return arr.join(" ");
 };
+const towerBuilder = numFloors => {
+  let ans = [];
+  const numStars = currFloor => currFloor + (currFloor - 1);
+  const offset = currFloor => numFloors - currFloor;
+  for (let i = 1; i <= numFloors; i++) {
+    ans.push(
+      " ".repeat(offset(i)) + "*".repeat(numStars(i)) + " ".repeat(offset(i))
+    );
+  }
+  return ans;
+};
 
 
 
