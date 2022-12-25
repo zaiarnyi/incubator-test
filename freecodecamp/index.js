@@ -1243,5 +1243,9 @@ function howManyDalmatians(number) {
 // FROM elves
 // WHERE firstname LIKE '%tegil%' OR lastname LIKE '%astar%';
 
+// SELECT people.*, COUNT(toys.*) as toy_count FROM people
+// JOIN toys ON people.id = toys.people_id
+// GROUP BY people.id, people.name
+
 
 
