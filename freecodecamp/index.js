@@ -1390,5 +1390,14 @@ const isPrime = (n) => {
   return n > 1;
 };
 
+const countBits = int => {
+  let binInt = int.toString(2).split("");
+  let oneBits = 0;
+  binInt.filter(el => {
+    el === "1" ? oneBits++ : "";
+  });
+  return oneBits;
+};
+
 
 
