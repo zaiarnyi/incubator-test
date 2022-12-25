@@ -1274,5 +1274,9 @@ function howManyDalmatians(number) {
 // GROUP BY age
 // HAVING COUNT(*) >= 10
 
+// SELECT d.*
+// FROM departments d
+// WHERE EXISTS (SELECT s.* FROM sales s WHERE s.department_id = d.id AND s.price > 98.00)
+
 
 
