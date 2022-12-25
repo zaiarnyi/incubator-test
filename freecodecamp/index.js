@@ -1295,5 +1295,16 @@ function deleteNth(arr,n){
   },[])
 }
 
+function firstNonRepeatingLetter(s) {
+  const arrayS = s.toLowerCase().split('');
+  const obj = {};
+  arrayS.forEach((item, index)=> {
+    obj[item] = {count: obj[item]?.count + 1 || 1, index}
+  });
+  const char = Object.keys(obj).filter(item=> obj[item].count === 1).shift();
+  if(char === undefined) return '';
+  return char;
+}
+
 
 
