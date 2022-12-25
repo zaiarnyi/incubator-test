@@ -1306,5 +1306,16 @@ function firstNonRepeatingLetter(s) {
   return char;
 }
 
+function firstNonRepeatingLetter(s) {
+  const arrayS = s.toLowerCase().split('');
+  const obj = {};
+  arrayS.forEach((item, index)=> {
+    obj[item] = {count: obj[item]?.count + 1 || 1, index}
+  });
+  const char = Object.values(obj).filter((item)=> item.count === 1).shift()
+  if(char.index === undefined) return '';
+  return s[char.index];
+}
+
 
 
