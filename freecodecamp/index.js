@@ -1507,6 +1507,23 @@ const count = string => {
   }
   return answer;
 };
+const countSmileys = arr => {
+  let count = 0;
+  const eyes = [":", ";"],
+    nose = ["-", "~"],
+    mouth = [")", "D"];
+  const hasEyesAndMouth = face =>
+    eyes.includes(face[0]) && mouth.includes(face[1]);
+  const hasEyesAndNoseAndMouth = face =>
+    eyes.includes(face[0]) && nose.includes(face[1]) && mouth.includes(face[2]);
+  arr.forEach(face => {
+    if (hasEyesAndMouth(face) || hasEyesAndNoseAndMouth(face)) {
+      count++;
+    }
+  });
+  return count;
+};
+
 
 
 
