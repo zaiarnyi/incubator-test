@@ -1546,6 +1546,29 @@ const createPhoneNumber = numbers => {
   return partOne + partTwo + partThree;
 };
 
+const dataReverse = (data) => {
+  const segments = [];
+  for (let i = 0; i < data.length; i += 8) {
+    segments.push(data.slice(i, i + 8));
+  }
+  return segments.reverse().reduce((acc, cur) => acc.concat(cur), []);
+};
+
+const decodeMorseLetter = letter => MORSE_CODE[letter];
+
+const decodeMorseWord = word =>
+  word
+    .split(" ")
+    .map(letter => decodeMorseLetter(letter))
+    .join("");
+
+const decodeMorse = morseCode =>
+  morseCode
+    .trim()
+    .split("   ")
+    .map(word => decodeMorseWord(word))
+    .join(" ");
+
 
 
 
