@@ -1313,7 +1313,7 @@ function firstNonRepeatingLetter(s) {
     obj[item] = {count: obj[item]?.count + 1 || 1, index}
   });
   const char = Object.values(obj).filter((item)=> item.count === 1).shift()
-  if(char.index === undefined) return '';
+  if(char?.index === undefined) return '';
   return s[char.index];
 }
 
