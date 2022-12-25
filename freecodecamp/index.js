@@ -1278,5 +1278,11 @@ function howManyDalmatians(number) {
 // FROM departments d
 // WHERE EXISTS (SELECT s.* FROM sales s WHERE s.department_id = d.id AND s.price > 98.00)
 
+function removeParentheses(s){
+  const l = s.replace(/\(.+\)/,'');
+  if(!l.length) return '  ';
+  return s.replace(/\(.+\)/,'');
+}
+
 
 
