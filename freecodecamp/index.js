@@ -1247,5 +1247,11 @@ function howManyDalmatians(number) {
 // JOIN toys ON people.id = toys.people_id
 // GROUP BY people.id, people.name
 
+// SELECT id, name
+// FROM departments d
+// WHERE id IN (SELECT department_id
+// FROM sales
+// WHERE price >= 98.00);
+
 
 
