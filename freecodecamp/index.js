@@ -1270,5 +1270,9 @@ function howManyDalmatians(number) {
 // GROUP BY d.name, day
 // ORDER BY DAY ASC
 
+// SELECT age, COUNT(*) as total_people FROM people
+// GROUP BY age
+// HAVING COUNT(*) >= 10
+
 
 
