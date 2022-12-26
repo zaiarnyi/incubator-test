@@ -1835,6 +1835,8 @@ const isPrime = num => {
   return true;
 };
 
+const isIntArray = (a) => (!a ? false : a.every((el) => Number.isInteger(el)));
+
 
 
 
