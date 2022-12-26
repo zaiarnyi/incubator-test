@@ -1836,6 +1836,19 @@ const isPrime = num => {
 };
 
 const isIntArray = (a) => (!a ? false : a.every((el) => Number.isInteger(el)));
+const kebabize = str => {
+  let result = "";
+  const numbers = Array.from(Array(10).keys());
+  for (let char of str) {
+    if (numbers.includes(+char)) continue;
+    if (char === char.toUpperCase() && !numbers.includes(+char)) {
+      result += "-" + char.toLowerCase();
+      continue;
+    }
+    result += char;
+  }
+  return result[0] === "-" ? result.slice(1) : result;
+};
 
 
 
