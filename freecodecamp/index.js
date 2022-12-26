@@ -1850,6 +1850,10 @@ const kebabize = str => {
   return result[0] === "-" ? result.slice(1) : result;
 };
 
+let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
+let waldoRegex = /Waldo/; // Change this line
+let result = waldoRegex.test(waldoIsHiding);
+
 
 
 
