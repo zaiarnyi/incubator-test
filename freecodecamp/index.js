@@ -1578,6 +1578,9 @@ const isPangram = string => {
   return true;
 };
 
+const narcissistic = value =>
+  [...`${value}`].reduce((a, b) => a + Math.pow(+b, `${value}`.length), 0) ===
+  value;
 
 
 
