@@ -1745,6 +1745,36 @@ function mineLocation(field) {
     }
   }
 }
+const stockList = (listOfArt, listOfCat) => {
+  if (!listOfArt.length || !listOfCat.length) {
+    return "";
+  }
+  const newList = listOfArt.reduce((acc, cur) => {
+    const art = cur.split(" ")[0].slice(0, 1);
+    const quantity = +cur.split(" ")[1];
+    if (acc[art]) {
+      acc[art] += quantity;
+    } else {
+      acc[art] = quantity;
+    }
+    return acc;
+  }, {});
+  for (const cat in newList) {
+    if (!listOfCat.includes(cat)) {
+      delete newList[cat];
+    }
+  }
+  return listOfCat
+    .reduce((acc, cur) => {
+      if (!(cur in newList)) {
+        acc += `(${cur} : 0)`;
+      } else {
+        acc += `(${cur} : ${newList[cur]})`;
+      }
+      return (acc += " - ");
+    }, "")
+    .slice(0, -3);
+};
 
 
 
