@@ -1811,6 +1811,10 @@ const chart = {
   Y: "Yankee",
   Z: "Zulu"
 };
+const isValidOctet = oct => oct === `${+oct}` && +oct <= 255 && +oct >= 0;
+
+const isValidIP = str =>
+  str.split(".").filter(oct => isValidOctet(oct)).length === 4;
 
 
 
