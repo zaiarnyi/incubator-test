@@ -1569,6 +1569,15 @@ const decodeMorse = morseCode =>
     .map(word => decodeMorseWord(word))
     .join(" ");
 
+const isPangram = string => {
+  const alphabet = [...Array(26)].map((_, i) => String.fromCharCode(i + 97)).join('');
+  const stringArray = [...string.toLowerCase()];
+  for (let i = 0; i < alphabet.length; i++) {
+    if (!stringArray.includes(alphabet[i])) return false;
+  }
+  return true;
+};
+
 
 
 
