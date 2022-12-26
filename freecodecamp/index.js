@@ -1582,5 +1582,12 @@ const narcissistic = value =>
   [...`${value}`].reduce((a, b) => a + Math.pow(+b, `${value}`.length), 0) ===
   value;
 
+const songDecoder = song => {
+  return song
+    .split("WUB")
+    .filter(word => word)
+    .join(" ");
+};
+
 
 
