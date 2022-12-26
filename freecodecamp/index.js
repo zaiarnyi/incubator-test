@@ -1601,5 +1601,12 @@ const duplicateEncode = word => {
   return answer;
 };
 
+const beggars = (values, n) => {
+  return values.reduce((acc, cur, idx) => {
+    acc[idx % n] += cur;
+    return acc;
+  }, [...Array(n)].fill(0));
+};
+
 
 
