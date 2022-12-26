@@ -1692,6 +1692,27 @@ const list = names => {
     .join(" ");
   return `${others} ${lastTwo}`;
 };
+const diamond = n => {
+  if (n % 2 === 0 || n < 0) return null;
+  const center = `${"*".repeat(n)}\n`;
+  let top = "";
+  let bottom = "";
+  let curr = n - 2;
+  let padding = 1;
+  while (curr > 0) {
+    bottom += `${" ".repeat(padding)}${"*".repeat(curr)}\n`;
+    curr -= 2;
+    padding += 1;
+  }
+  curr = 1;
+  padding -= 1;
+  while (curr < n) {
+    top += `${" ".repeat(padding)}${"*".repeat(curr)}\n`;
+    curr += 2;
+    padding -= 1;
+  }
+  return `${top}${center}${bottom}`;
+};
 
 
 
