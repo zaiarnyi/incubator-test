@@ -1714,6 +1714,17 @@ const diamond = n => {
   return `${top}${center}${bottom}`;
 };
 
+const calculateWorth = (side, worth) =>
+  side.split(" ").reduce((acc, curr, i) => acc + worth[i] * curr, 0);
+
+const goodVsEvil = (good, evil) => {
+  good = calculateWorth(good, [1, 2, 3, 3, 4, 10]);
+  evil = calculateWorth(evil, [1, 2, 2, 2, 3, 5, 10]);
+  if (good > evil) return "Battle Result: Good triumphs over Evil";
+  if (good < evil) return "Battle Result: Evil eradicates all trace of Good";
+  return "Battle Result: No victor on this battle field";
+};
+
 
 
 
