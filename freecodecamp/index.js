@@ -1725,6 +1725,17 @@ const goodVsEvil = (good, evil) => {
   return "Battle Result: No victor on this battle field";
 };
 
+const groupByCommas = (n) => {
+  const m = [...`${n}`].reverse();
+  return m.reduce(
+    (acc, cur, idx) =>
+      (idx + 1) % 3 === 0 && idx !== m.length - 1
+        ? `,${cur}${acc}`
+        : `${cur}${acc}`,
+    ""
+  );
+};
+
 
 
 
