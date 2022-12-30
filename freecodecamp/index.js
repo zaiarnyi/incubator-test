@@ -1246,7 +1246,6 @@ function howManyDalmatians(number) {
 // SELECT people.*, COUNT(toys.*) as toy_count FROM people
 // JOIN toys ON people.id = toys.people_id
 // GROUP BY people.id, people.name
-
 // SELECT id, name
 // FROM departments d
 // WHERE id IN (SELECT department_id
